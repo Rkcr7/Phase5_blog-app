@@ -1,0 +1,27 @@
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { BlogDashboardComponent } from './blog-dashboard/blog-dashboard.component';
+import { InformationComponent } from './information/information.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    BlogDashboardComponent,
+    InformationComponent
+
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

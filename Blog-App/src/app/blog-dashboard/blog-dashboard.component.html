@@ -1,0 +1,77 @@
+ 
+<nav class="navbar navbar-light bg-primary">
+  <div class="container-fluid">
+    <h1 >
+        Blog App
+    </h1>
+    <div class =" d-flex">
+        <button (click)=" clickAddBlog()" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Blog</button>
+    </div>
+  </div>
+</nav>
+
+
+<div class="card-footer text-center">
+  <div class="footer"> Blog List</div>
+</div>
+<tr *ngFor="let row of blogData">
+<div class="card bg-dark text-white mb-3 " >
+  <div class="card-body">
+      <h4 class="card-title">{{row.title}}</h4>
+      <div class="card-subtitle text-muted mb-2">
+        {{myDate  | date }}
+      </div>
+      <div class="card-text mb-1">{{row.description}}</div>
+     
+          <button (click)="onEdit(row)" class="btn btn-info" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" >Edit</button>
+          <button  class="btn btn-info mx-3" [routerLink]="['/information/'+ row.id]">Detail</button>
+          <button  (click)=" deleteBlog(row)" class="btn btn-danger mx-2">Delete</button>
+  </div>
+</div>
+</tr> 
+<div class="card-footer text-center">
+  BLOGS
+</div>
+
+
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Blog Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+          <form [formGroup]="formValue"> 
+            <div class="mb-3">
+              <label for="title">Title</label>
+           <input required name="title" formControlName="title" type="text" name="title" id="title" class="form-control " >
+           <small *ngIf="formValue.get('title').invalid && formValue.get('title').touched" class="text-danger">Title is Required</small>
+            </div>
+            
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Description</label>
+              <textarea required name="text" formControlName="description" class="form-control" id="exampleInputPassword1" rows="7"></textarea>
+              <small *ngIf="formValue.get('description').invalid && formValue.get('description').touched" class="text-danger">You can not blank this field</small>
+            </div>
+
+            <div class="mb-3" >
+                <label for="exampleInputPassword1" class="form-label">Details</label>
+                <textarea  name="text"  formControlName="details" class="form-control" id="exampleInputPassword1" rows="4"></textarea>
+              </div>
+          </form>
+
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="cancle" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button [disabled]="formValue.invalid" type="button" *ngIf="showAdd"  (click)="postBlogDetails()" class="btn btn-primary">Add</button>
+          <button type="button" *ngIf="showUpadte" (click)="updateBlogDetails()" class="btn btn-warning">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>

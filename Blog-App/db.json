@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Angular",
+      "description": "Angular is a TypeScript-based free and open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS\n\nAngular is a TypeScript-based free and open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS",
+      "details": "Why AngularJS?\n1 HTML is great for declaring static documents, \n2 ut it falters when we try to use \n3 it for declaring dynamic views in web-applications. \n4 AngularJS lets you extend HTML vocabulary for your application. \n5 The resulting environment is extraordinarily expressive, readable, and quick to develop."
+    },
+    {
+      "id": 2,
+      "title": "Node JS",
+      "description": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.",
+      "details": "What is Node.js?\nNode.js is an open source server environment\nNode.js is free\nNode.js runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.)\nNode.js uses JavaScript on the server\n\nWhat Can Node.js Do?\nNode.js can generate dynamic page content\nNode.js can create, open, read, write, delete, and close files on the server\nNode.js can collect form data\nNode.js can add, delete, modify data in your database\n\nWhat is a Node.js File?\n\nNode.js files contain tasks that will be executed on certain events\nA typical event is someone trying to access a port on the server\nNode.js files must be initiated on the server before having any effect\nNode.js files have extension \".js\""
+    },
+    {
+      "id": 3,
+      "title": "HTML",
+      "description": "The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.",
+      "details": "What is HTML?\nHTML stands for Hyper Text Markup Language\nHTML is the standard markup language for creating Web pages\nHTML describes the structure of a Web page\nHTML consists of a series of elements\nHTML elements tell the browser how to display the content\nHTML elements label pieces of content such as \"this is a heading\", \"this is a paragraph\", \"this is a link\", etc."
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
